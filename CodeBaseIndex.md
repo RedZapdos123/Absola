@@ -19,7 +19,6 @@ absola/
 ├── README.md              # Project overview
 ├── setup.ps1              # Automated setup script
 ├── start.ps1              # Application launcher
-├── docker-compose.yml     # Container orchestration
 └── CodeBaseIndex.md       # This file
 ```
 

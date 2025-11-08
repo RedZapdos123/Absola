@@ -56,11 +56,14 @@ uploads/
 *.docx
 
 # Test files and directories - EXCLUDED per user request
-tests/e2e/
-tests/playwright-report/
-tests/test-results/
+tests/
+.playwright-mcp/
+run-tests.ps1
 *.spec.ts
 test_*.py
+playwright.config.ts
+playwright-report/
+test-results/
 
 # Node modules - EXCLUDED per user request
 node_modules/
