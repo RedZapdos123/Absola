@@ -1,0 +1,40 @@
+{
+  "ports": {
+    "frontend": 3000,
+    "backend": 4000,
+    "ai": 5000
+  },
+  "models": {
+    "summarizer": "AventIQ/T5-Legal-Summarization-base",
+    "embeddings": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "rag": {
+    "topK": 5,
+    "maxContextChars": 12000,
+    "temperature": 0.2,
+    "maxOutputTokens": 512
+  },
+  "chunking": {
+    "size": 950,
+    "overlap": 100
+  },
+  "scrape": {
+    "enabled": true,
+    "providers": ["tldrlegal", "indiankanoon"],
+    "cacheTtlHours": 72
+  },
+  "storage": {
+    "root": "data",
+    "tmp": "data/tmp",
+    "documents": "data/documents",
+    "indexes": "data/vector_indexes",
+    "cache": "data/cache"
+  },
+  "redaction": {
+    "enabled": false,
+    "patterns": [
+      "\\b[0-9]{2,4}-[0-9]{2,4}-[0-9]{2,4}\\b",
+      "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Absola theme variables */
+    --font-family: Georgia, 'Times New Roman', serif;
+    --box-shadow-3d: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    --box-shadow-3d-strong: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    --text-shadow-3d: 2px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility classes for common styles */
+.georgia-font {
+  font-family: var(--font-family);
+}
+
+.box-shadow-3d {
+  box-shadow: var(--box-shadow-3d);
+}
+
+.box-shadow-3d-strong {
+  box-shadow: var(--box-shadow-3d-strong);
+}
+
+.text-shadow-3d {
+  text-shadow: var(--text-shadow-3d);
+}
+
+/* Azure Division branding */
+.azure-blue {
+  color: #4169E1;
+}

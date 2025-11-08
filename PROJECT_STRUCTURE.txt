@@ -1,0 +1,174 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is B020-9C31
+C:.
+|   .env.example
+|   .gitignore
+|   app.py
+|   docker-compose.yml
+|   Dockerfile
+|   IMPLEMENTATION_SUMMARY.md
+|   PROJECT_STRUCTURE.txt
+|   pyproject.toml
+|   README.md
+|   README_OLD.md
+|   requirements.txt
+|   setup.cfg
+|   SETUP.md
+|   spec.md
+|   
++---ai_services
+|   |   Dockerfile
+|   |   requirements.txt
+|   |   
+|   \---app
+|       |   main.py
+|       |   __init__.py
+|       |   
+|       +---api
+|       |       ingest.py
+|       |       query.py
+|       |       scrape.py
+|       |       summarize.py
+|       |       __init__.py
+|       |       
+|       +---core
+|       |       chunking.py
+|       |       config.py
+|       |       embeddings.py
+|       |       gemini_client.py
+|       |       __init__.py
+|       |       
+|       +---persistence
+|       |       faiss_store.py
+|       |       __init__.py
+|       |       
+|       +---pipelines
+|       |       rag_chain.py
+|       |       summarize_chain.py
+|       |       __init__.py
+|       |       
+|       \---scraping
+|               indiankanoon.py
+|               tldrlegal.py
+|               __init__.py
+|               
++---backend
+|   |   .gitignore
+|   |   Dockerfile
+|   |   package.json
+|   |   tsconfig.json
+|   |   
+|   \---src
+|       |   app.ts
+|       |   server.ts
+|       |   
+|       +---config
+|       |       env.ts
+|       |       logger.ts
+|       |       storage.ts
+|       |       
+|       +---controllers
+|       |       document.controller.ts
+|       |       health.controller.ts
+|       |       
+|       +---middleware
+|       |       errorHandler.ts
+|       |       requestLogger.ts
+|       |       
+|       +---models
+|       |       Conversation.ts
+|       |       Document.ts
+|       |       
+|       +---routes
+|       |       document.routes.ts
+|       |       health.routes.ts
+|       |       
+|       +---services
+|       |       aiClient.ts
+|       |       document.service.ts
+|       |       
+|       \---types
+|               index.ts
+|               
++---config
+|       app.config.json
+|       
++---docs
+|       API.md
+|       USER_GUIDE.md
+|       
++---frontend
+|   |   .env.example
+|   |   .eslintrc.json
+|   |   .gitignore
+|   |   Dockerfile
+|   |   next.config.js
+|   |   package.json
+|   |   postcss.config.js
+|   |   tailwind.config.ts
+|   |   tsconfig.json
+|   |   
+|   +---app
+|   |   |   globals.css
+|   |   |   layout.tsx
+|   |   |   page.tsx
+|   |   |   
+|   |   \---document
+|   |       \---[id]
+|   |               page.tsx
+|   |               
+|   +---components
+|   |   +---analysis
+|   |   |       SummaryView.tsx
+|   |   |       
+|   |   +---document
+|   |   |       DocumentList.tsx
+|   |   |       DocumentViewer.tsx
+|   |   |       
+|   |   +---rag
+|   |   |       ChatInterface.tsx
+|   |   |       Message.tsx
+|   |   |       
+|   |   +---ui
+|   |   |       Tabs.tsx
+|   |   |       
+|   |   \---upload
+|   |           DocumentUploader.tsx
+|   |           
+|   +---hooks
+|   |       useDocument.ts
+|   |       
+|   \---lib
+|       |   api.ts
+|       |   store.ts
+|       |   
+|       \---providers
+|               QueryProvider.tsx
+|               
++---models
+|       model_loader.py
+|       __init__.py
+|       
++---processor
+|       document_processor.py
+|       __init__.py
+|       
++---rag
+|       rag_system.py
+|       __init__.py
+|       
++---scraper
+|       legal_scraper.py
+|       __init__.py
+|       
++---tests
+|       conftest.py
+|       test_models.py
+|       test_processor.py
+|       test_rag.py
+|       test_scraper.py
+|       __init__.py
+|       
+\---ui
+        __init__.py
+        

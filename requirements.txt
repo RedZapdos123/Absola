@@ -1,0 +1,35 @@
+# Core Dependencies
+streamlit==1.29.0
+python-dotenv==1.0.0
+
+# ML/AI Models
+transformers==4.36.0
+torch>=2.0.0
+sentence-transformers==2.2.2
+
+# RAG and Vector Store
+langchain==0.1.0
+langchain-community==0.0.10
+faiss-cpu==1.7.4
+
+# Document Processing
+pypdf>=3.0.0
+python-docx==1.1.0
+pdfplumber==0.10.3
+
+# Web Scraping
+beautifulsoup4==4.12.2
+requests==2.31.0
+lxml==4.9.3
+
+# Development and Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.12.1
+flake8==7.0.0
+mypy==1.7.1
+types-requests==2.31.0.10
+
+# Performance
+numpy==1.24.3
+pandas==2.1.4

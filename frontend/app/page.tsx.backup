@@ -1,0 +1,300 @@
+'use client'
+
+import { DocumentUploader } from '@/components/upload/DocumentUploader'
+import { DocumentList } from '@/components/document/DocumentList'
+import { FileText, Scale, Shield, Zap, Upload, Search, CheckCircle, Users, Mail, Github } from 'lucide-react'
+import Link from 'next/link'
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-cream">
+      {/* Navigation */}
+      <nav className="wood-texture sticky top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Scale className="w-8 h-8 text-gold" />
+              <span className="text-2xl font-bold text-cream">Absola</span>
+            </div>
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#home" className="text-cream hover:text-gold transition-colors">Home</a>
+              <a href="#features" className="text-cream hover:text-gold transition-colors">Features</a>
+              <a href="#how-it-works" className="text-cream hover:text-gold transition-colors">How It Works</a>
+              <a href="#about" className="text-cream hover:text-gold transition-colors">About</a>
+              <a href="#upload" className="px-4 py-2 bg-gold text-wood-darkest rounded-md hover:bg-opacity-90 transition-colors font-semibold">
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="home" className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 wood-texture opacity-10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Scale className="w-16 h-16 text-wood-medium" />
+              <h1 className="text-6xl font-bold text-wood-darkest">
+                Absola
+              </h1>
+            </div>
+            <p className="text-2xl text-wood-dark mb-4">
+              Privacy-First Legal Document Analysis
+            </p>
+            <p className="text-lg text-wood-medium mb-8 max-w-2xl mx-auto">
+              Harness the power of AI to analyze, summarize, and understand your legal documents. 
+              Your privacy is our priority – all processing happens securely on your infrastructure.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <a href="#upload" className="px-8 py-3 bg-wood-medium text-cream rounded-lg hover:bg-wood-dark transition-all shadow-lg hover:shadow-xl font-semibold">
+                Start Analyzing
+              </a>
+              <a href="#how-it-works" className="px-8 py-3 bg-cream border-2 border-wood-medium text-wood-darkest rounded-lg hover:bg-wood-lightest transition-all font-semibold">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* Decorative divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 wood-texture"></div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-wood-lightest">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-wood-darkest mb-4">Powerful Features</h2>
+            <p className="text-xl text-wood-dark">Everything you need for legal document analysis</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Feature 1 */}
+            <div className="wood-panel p-8 text-center transform hover:scale-105 transition-transform">
+              <div className="bg-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-wood-darkest" />
+              </div>
+              <h3 className="text-xl font-bold text-cream mb-3">Privacy First</h3>
+              <p className="text-wood-lightest">
+                Your documents never leave your infrastructure. Complete control over your sensitive legal data.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="wood-panel p-8 text-center transform hover:scale-105 transition-transform">
+              <div className="bg-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-wood-darkest" />
+              </div>
+              <h3 className="text-xl font-bold text-cream mb-3">AI-Powered Analysis</h3>
+              <p className="text-wood-lightest">
+                Advanced AI technology to extract insights, generate summaries, and answer questions instantly.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="wood-panel p-8 text-center transform hover:scale-105 transition-transform">
+              <div className="bg-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Scale className="w-8 h-8 text-wood-darkest" />
+              </div>
+              <h3 className="text-xl font-bold text-cream mb-3">Legal Expertise</h3>
+              <p className="text-wood-lightest">
+                Specialized in legal terminology and document structures for accurate, relevant analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-20 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-wood-darkest mb-4">How It Works</h2>
+            <p className="text-xl text-wood-dark">Simple, secure, and powerful</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-12">
+              {/* Step 1 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full wood-texture flex items-center justify-center text-2xl font-bold text-gold">
+                  1
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-wood-medium">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Upload className="w-6 h-6 text-wood-medium" />
+                      <h3 className="text-2xl font-bold text-wood-darkest">Upload Your Document</h3>
+                    </div>
+                    <p className="text-wood-dark">
+                      Simply drag and drop your PDF, DOCX, or TXT legal document. Supports contracts, agreements, court documents, and more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full wood-texture flex items-center justify-center text-2xl font-bold text-gold">
+                  2
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-wood-medium">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Zap className="w-6 h-6 text-wood-medium" />
+                      <h3 className="text-2xl font-bold text-wood-darkest">AI Processing</h3>
+                    </div>
+                    <p className="text-wood-dark">
+                      Our AI analyzes your document, extracting key information, identifying important clauses, and understanding the context.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full wood-texture flex items-center justify-center text-2xl font-bold text-gold">
+                  3
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-wood-medium">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Search className="w-6 h-6 text-wood-medium" />
+                      <h3 className="text-2xl font-bold text-wood-darkest">Ask Questions</h3>
+                    </div>
+                    <p className="text-wood-dark">
+                      Get instant answers to your questions about the document. Summaries, key terms, obligations, and more – just ask.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full wood-texture flex items-center justify-center text-2xl font-bold text-gold">
+                  4
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-wood-medium">
+                    <div className="flex items-center gap-3 mb-3">
+                      <CheckCircle className="w-6 h-6 text-wood-medium" />
+                      <h3 className="text-2xl font-bold text-wood-darkest">Make Informed Decisions</h3>
+                    </div>
+                    <p className="text-wood-dark">
+                      Use the insights to make better decisions, negotiate effectively, or simply understand your legal documents better.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 wood-texture">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-cream mb-6">About Absola</h2>
+            <p className="text-xl text-wood-lightest mb-8 leading-relaxed">
+              Absola is built on the principle that powerful legal document analysis should never compromise your privacy. 
+              We believe that individuals and organizations deserve access to cutting-edge AI technology without 
+              sacrificing control over their sensitive information.
+            </p>
+            <p className="text-lg text-wood-lightest mb-8 leading-relaxed">
+              Our platform combines state-of-the-art natural language processing with a privacy-first architecture, 
+              ensuring that your legal documents remain confidential while providing you with the insights you need.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <Shield className="w-12 h-12 text-gold mx-auto mb-3" />
+                <h3 className="text-xl font-bold text-cream mb-2">Secure</h3>
+                <p className="text-wood-lightest">End-to-end encryption</p>
+              </div>
+              <div className="text-center">
+                <Users className="w-12 h-12 text-gold mx-auto mb-3" />
+                <h3 className="text-xl font-bold text-cream mb-2">User-Focused</h3>
+                <p className="text-wood-lightest">Built for your needs</p>
+              </div>
+              <div className="text-center">
+                <Zap className="w-12 h-12 text-gold mx-auto mb-3" />
+                <h3 className="text-xl font-bold text-cream mb-2">Powerful</h3>
+                <p className="text-wood-lightest">Advanced AI technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upload Section */}
+      <section id="upload" className="py-20 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-wood-darkest mb-4">Get Started</h2>
+            <p className="text-xl text-wood-dark">Upload your first document and experience the power of AI-driven legal analysis</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <DocumentUploader />
+          </div>
+        </div>
+      </section>
+
+      {/* Documents Section */}
+      <section className="py-16 bg-wood-lightest">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-wood-darkest mb-8 text-center">
+            Your Documents
+          </h2>
+          <DocumentList />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="wood-texture py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Scale className="w-6 h-6 text-gold" />
+                <span className="text-xl font-bold text-cream">Absola</span>
+              </div>
+              <p className="text-wood-lightest">
+                Privacy-first legal document analysis powered by AI
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-cream mb-4">Quick Links</h3>
+              <div className="space-y-2">
+                <a href="#home" className="block text-wood-lightest hover:text-gold transition-colors">Home</a>
+                <a href="#features" className="block text-wood-lightest hover:text-gold transition-colors">Features</a>
+                <a href="#how-it-works" className="block text-wood-lightest hover:text-gold transition-colors">How It Works</a>
+                <a href="#about" className="block text-wood-lightest hover:text-gold transition-colors">About</a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-cream mb-4">Contact</h3>
+              <div className="space-y-2">
+                <a href="mailto:contact@absola.com" className="flex items-center gap-2 text-wood-lightest hover:text-gold transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span>contact@absola.com</span>
+                </a>
+                <a href="https://github.com/absola" className="flex items-center gap-2 text-wood-lightest hover:text-gold transition-colors">
+                  <Github className="w-4 h-4" />
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-wood-light pt-8 text-center">
+            <p className="text-wood-lightest">
+              &copy; {new Date().getFullYear()} Absola. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
+}

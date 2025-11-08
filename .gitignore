@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# ML Models and Data (excluding these for now, can restore if needed)
+models/downloads/
+models/*.bin
+models/*.safetensors
+models/*.gguf
+*.pth
+*.pt
+uploads/
+*.pdf
+*.docx
+
+# Test files and directories - EXCLUDED per user request
+tests/e2e/
+tests/playwright-report/
+tests/test-results/
+*.spec.ts
+test_*.py
+
+# Node modules - EXCLUDED per user request
+node_modules/
+*/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Environment - INCLUDED per user request (not ignored)
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+tmp/
+temp/
+*.tmp
