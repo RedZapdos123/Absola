@@ -1,8 +1,7 @@
 'use client'
 
 import { useDocuments, useDeleteDocument } from '@/hooks/useDocument'
-import { FileText, Trash2, Eye, Clock } from 'lucide-react'
-import Link from 'next/link'
+import { FileText, Trash2, Clock } from 'lucide-react'
 
 interface DocumentListProps {
   onDocumentSelect?: (documentId: string) => void
@@ -89,14 +88,6 @@ export function DocumentList({ onDocumentSelect }: DocumentListProps = {}) {
                 Ask Questions
               </button>
             )}
-            <Link
-              href={`/document/${doc._id}`}
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-amber-800 dark:bg-amber-700 text-amber-50 rounded-none hover:bg-amber-700 dark:hover:bg-amber-600 transition-all shadow-md font-semibold text-sm"
-              style={{ fontFamily: 'Georgia, serif' }}
-            >
-              <Eye className="w-4 h-4" />
-              View
-            </Link>
             <button
               onClick={() => handleDelete(doc._id, doc.filename)}
               disabled={deleteMutation.isPending}
